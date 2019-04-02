@@ -8,15 +8,14 @@ namespace Pocker.Core.Entities
 {
     public class Deck : BaseEntity
     {
-        private static Random rng = new Random();
-        private IList<Card> cards;
+        public IList<Card> Cards { get; protected set; }
 
         /// <summary>
         /// Setup the decks of 52 cards when initalizing a new deck
         /// </summary>
         public Deck()
         {
-            cards = new List<Card>();
+            Cards = new List<Card>();
 
             // 4 suites
             foreach(string suite in GlobalConstants.SUITE_LIST)
@@ -25,14 +24,9 @@ namespace Pocker.Core.Entities
                 foreach(string rank in GlobalConstants.RANK_LIST)
                 {
                     Card card = new Card(suite, rank);
-                    cards.Add(card);
+                    Cards.Add(card);
                 }
             }
-        }
-
-        public IList<Card> GetCards()
-        {
-            return cards;
         }
 
         /// <summary>
@@ -40,50 +34,10 @@ namespace Pocker.Core.Entities
         /// </summary>
         public void Reset()
         {
-            foreach(Card card in cards.Where(x => !x.Visible))
+            foreach(Card card in Cards.Where(x => !x.Visible))
             {
                 card.Visible = false;
             }
         }
-
-        /// <summary>
-        /// Return the number of cards to the player
-        /// </summary>
-        public void DealCards(PlayerHand hand)
-        {
-            for(int i=0; i < hand.NumberOfCards; i++)
-            {
-                Card card = cards.FirstOrDefault(x => !x.Visible);
-                card.Visible = true;
-
-                hand.Cards.Add(card);
-            }
-        }
-
-        public void ShuffleMultiple(int times)
-        {
-            for (int i = 0; i < times; i++)
-                Shuffle();
-        }
-
-        #region Helpers
-        /// <summary>
-        /// Due to the randomness, it is not 100% that the card sequences are differents before each shuffling
-        /// Shuffle deck via Knuth shuffle algorithm 
-        /// https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle
-        /// </summary>
-        private void Shuffle()
-        {
-            int n = cards.Count;
-            while (n > 1)
-            {
-                n--;
-                int k = rng.Next(n + 1);
-                Card value = cards[k];
-                cards[k] = cards[n];
-                cards[n] = value;
-            }
-        }
-        #endregion
     }
 }

@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace Pocker.Core.Services
 {
-    public class TwoCardsGameRule : IGameRule
+    public class TwoCardsGameRule : IGameRuleService
     {
         /// <summary>
         /// 2 cards of sequential rank, same suit
@@ -58,32 +58,6 @@ namespace Pocker.Core.Services
             HandleCardsMissingException(cards);
 
             return !SameSuit(cards) && GetRankPowerDifferent(cards[0], cards[1]) == 0;
-        }
-
-        /// <summary>
-        /// Return values based on the strength of the cards on player hand
-        /// 5 = Straight flush
-        /// 4 = Flush
-        /// 3 = Straight
-        /// 2 = Pair
-        /// 1 = High card
-        /// </summary>
-        /// <param name="cards"></param>
-        /// <returns></returns>
-        public int GenerateHandCardsPower(IList<Card> cards)
-        {
-            int result = 1;
-
-            if (IsStraightFlush(cards))
-                result = 5;
-            else if (IsFlush(cards))
-                result = 4;
-            else if (IsStraight(cards))
-                result = 3;
-            else if (HasPair(cards))
-                result = 2;
-
-            return result;
         }
 
         #region Helpers

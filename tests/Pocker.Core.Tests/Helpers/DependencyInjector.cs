@@ -29,7 +29,9 @@ namespace Pocker.Core.Tests.Helpers
             builder.RegisterType<MockPockerDatabase>().As<IPockerDatabase>();
 
             // register for services
-            builder.RegisterType<TwoCardsGameRule>().As<IGameRule>();
+            builder.RegisterType<DealerService>().As<IDealerService>();
+            builder.RegisterType<TwoCardsGameRule>().As<IGameRuleService>();
+            builder.RegisterType<TwoCardsPockerGame>().As<IGameService>();
 
             var appContainer = builder.Build();
             _serviceProvider = new AutofacServiceProvider(appContainer);

@@ -8,13 +8,15 @@ using System.Threading.Tasks;
 
 namespace Pocker.Core.Services
 {
-    public class TwoCardsPockerGame : IGame
+    public class TwoCardsPockerGame : IGameService
     {
-        private readonly IGameRule _gameRule;
+        private readonly IGameRuleService _gameRule;
+        private readonly IDealerService _dealer;
 
-        public TwoCardsPockerGame(IGameRule gameRule)
+        public TwoCardsPockerGame(IGameRuleService gameRule, IDealerService dealer)
         {
             _gameRule = gameRule;
+            _dealer = dealer;
         }
 
         /// <summary>
@@ -27,18 +29,30 @@ namespace Pocker.Core.Services
         public void Play(Deck deck, int numberOfShuffles, GameRound round)
         {
             // 1. Shuffle the deck
-            deck.ShuffleMultiple(numberOfShuffles);
+            _dealer.Shuffle(deck, numberOfShuffles);
 
             // 2. Deal the cards to all the players
             foreach(var hand in round.PlayerHands)
             {
-                deck.DealCards(hand);
+                _dealer.DealCards(deck, hand);
+
+                // 3. Calculate the power of all cards on each player hand
+                _dealer.CalculateHandRank(hand);
             }
 
-            // 3. Assess the cards for player and calculate points based on game rule
-            foreach (var hand in round.PlayerHands)
+            // 4. Nominal the score to 0 – weakest to strongest x-1(where x = number of players)
+            // Just simply sort the player hands by power desc and then pick the first one as the winner
+            int currentCount = round.PlayerHands.Count;
+            foreach(var hand in round.PlayerHands.OrderByDescending(x => x.Power))
             {
-                
+                hand.Score = currentCount;
+
+                if (currentCount == round.PlayerHands.Count)
+                {
+                    round.UpdateWinner(hand);
+                }
+
+                currentCount--;
             }
         }
         

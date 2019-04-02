@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Pocker.Core.Interfaces
 {
-    public interface IGame
+    public interface IGameService
     {
         void Play(Deck deck, int numberOfShuffle, GameRound round);
     }

@@ -6,8 +6,8 @@ namespace Pocker.Core.Entities
     public class GameRound : BaseEntity
     {
         public IList<PlayerHand> PlayerHands { get; set; }
-        public PlayerHand RoundWinner { get; set; }
-        public bool Finished { get; set; }
+        public PlayerHand RoundWinner { get; protected set; }
+        public bool Finished { get; protected set; }
 
         public GameRound(IList<Player> players, int numberOfCards)
         {
@@ -20,6 +20,12 @@ namespace Pocker.Core.Entities
                 PlayerHand hand = new PlayerHand(player, numberOfCards);
                 PlayerHands.Add(hand);
             }
+        }
+
+        public void UpdateWinner(PlayerHand winner)
+        {
+            RoundWinner = winner;
+            Finished = true;
         }
     }
 }

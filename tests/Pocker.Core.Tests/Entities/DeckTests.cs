@@ -1,10 +1,6 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Pocker.Core.Entities;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pocker.Core.Tests.Entities
 {
@@ -24,67 +20,10 @@ namespace Pocker.Core.Tests.Entities
             // Arrange
             
             // Act
-            var cards = deck.GetCards();
+            var cards = deck.Cards;
 
             // Assert
             Assert.AreEqual(52, cards.Count(x => !x.Visible));
         }
-
-        [TestMethod]
-        public void ShuffleMultiple_1_ShouldMakeTheCardSequenceDifferent()
-        {
-            // Arrange 
-            deck.ShuffleMultiple(1);
-            var before = Clone(deck.GetCards());
-            deck.ShuffleMultiple(1);
-            var after = Clone(deck.GetCards());
-
-            // Act && Assert
-            Assert.IsTrue(HasDifferentSequences(before, after));
-        }
-
-        [TestMethod]
-        public void DealCards_ShouldReturnVisibleCardsToPlayerHand()
-        {
-            // Arrange 
-            PlayerHand playerHand = new PlayerHand(new Player("Mike"), 2);
-
-            // Act
-            deck.DealCards(playerHand);
-
-            // Assert
-            Assert.AreEqual(2, playerHand.Cards.Count(x => x.Visible));
-            Assert.AreEqual(50, deck.GetCards().Count(x => !x.Visible));
-            Assert.AreEqual(2, deck.GetCards().Count(x => x.Visible));
-        }
-
-        #region Helpers
-        public bool HasDifferentSequences(IList<Card> before, IList<Card> after)
-        {
-            int n = before.Count;
-            int i = 0;
-
-            while (i++ < n)
-            {
-                if (!before[i].Equals(after[i]))
-                    return true;
-            }
-
-            return false;
-        }
-
-        public IList<Card> Clone(IList<Card> cards)
-        {
-            var newCards = new List<Card>();
-
-            foreach(var card in cards)
-            {
-                newCards.Add(card);
-            }
-
-            return newCards;
-        }
-
-        #endregion
     }
 }

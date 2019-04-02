@@ -7,13 +7,11 @@ using System.Threading.Tasks;
 
 namespace Pocker.Core.Interfaces
 {
-    public interface IGameRule
+    public interface IGameRuleService
     {
         bool IsStraightFlush(IList<Card> cards);
         bool IsFlush(IList<Card> cards);
         bool IsStraight(IList<Card> cards);
         bool HasPair(IList<Card> cards);
-
-        int GenerateHandCardsPower(IList<Card> cards);
     }
 }
