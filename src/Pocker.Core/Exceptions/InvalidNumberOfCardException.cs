@@ -5,7 +5,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poker.Core.Exceptions
+namespace Pocker.Core.Exceptions
 {
     public class InvalidNumberOfCardException : Exception
     {

@@ -1,13 +1,13 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using Poker.Core.Entities;
-using Poker.Core.Interfaces;
-using Poker.Core.Repositories;
-using Poker.Core.Services;
+using Pocker.Core.Entities;
+using Pocker.Core.Interfaces;
+using Pocker.Core.Repositories;
+using Pocker.Core.Services;
 using System;
 
-namespace Poker.Core.Tests.Helpers
+namespace Pocker.Core.Tests.Helpers
 {
     public class DependencyInjector
     {

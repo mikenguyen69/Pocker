@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{688225E0-815C-4AC4-AFF7-8A68821996BE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Poker.ConsoleApp</RootNamespace>
-    <AssemblyName>Poker.ConsoleApp</AssemblyName>
+    <RootNamespace>Pocker.ConsoleApp</RootNamespace>
+    <AssemblyName>Pocker.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -60,9 +60,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Pocker.Core\Poker.Core.csproj">
+    <ProjectReference Include="..\Pocker.Core\Pocker.Core.csproj">
       <Project>{9b053d4c-c0e5-419e-a371-088b27a0b804}</Project>
-      <Name>Poker.Core</Name>
+      <Name>Pocker.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

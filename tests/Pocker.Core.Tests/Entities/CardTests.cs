@@ -1,13 +1,13 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Poker.Core.Entities;
-using Poker.Core.Helpers;
+using Pocker.Core.Entities;
+using Pocker.Core.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poker.Core.Tests.Entities
+namespace Pocker.Core.Tests.Entities
 {
     [TestClass]
     public class CardTests

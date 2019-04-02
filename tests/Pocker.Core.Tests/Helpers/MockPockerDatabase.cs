@@ -1,11 +1,11 @@
-﻿using Poker.Core.Entities;
-using Poker.Core.Entities.Abstract;
-using Poker.Core.Helpers;
-using Poker.Core.Interfaces;
+﻿using Pocker.Core.Entities;
+using Pocker.Core.Entities.Abstract;
+using Pocker.Core.Helpers;
+using Pocker.Core.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Poker.Core.Tests.Helpers
+namespace Pocker.Core.Tests.Helpers
 {
     public class MockPockerDatabase : IPockerDatabase
     {

@@ -1,15 +1,18 @@
 ﻿using Autofac;
 using Autofac.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection;
-using Poker.Core.Entities;
-using Poker.Core.Helpers;
-using Poker.Core.Interfaces;
-using Poker.Core.Repositories;
-using Poker.Core.Services;
+using Pocker.Core.Entities;
+using Pocker.Core.Helpers;
+using Pocker.Core.Interfaces;
+using Pocker.Core.Repositories;
+using Pocker.Core.Services;
 using System;
+using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace Poker.ConsoleApp
+namespace Pocker.ConsoleApp
 {
     class Program
     {

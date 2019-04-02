@@ -1,4 +1,4 @@
-﻿namespace Poker.Core.Helpers
+﻿namespace Pocker.Core.Helpers
 {
     public class GlobalConstants
     {

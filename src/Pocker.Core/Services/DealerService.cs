@@ -1,11 +1,11 @@
-﻿using Poker.Core.Entities;
-using Poker.Core.Helpers;
-using Poker.Core.Interfaces;
+﻿using Pocker.Core.Entities;
+using Pocker.Core.Helpers;
+using Pocker.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Poker.Core.Services
+namespace Pocker.Core.Services
 {
     public class DealerService : IDealerService
     {

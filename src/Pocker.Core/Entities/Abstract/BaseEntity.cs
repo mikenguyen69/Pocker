@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poker.Core.Entities.Abstract
+namespace Pocker.Core.Entities.Abstract
 {
     public abstract class BaseEntity
     {

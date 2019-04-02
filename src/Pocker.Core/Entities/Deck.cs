@@ -1,10 +1,10 @@
-﻿using Poker.Core.Entities.Abstract;
-using Poker.Core.Helpers;
+﻿using Pocker.Core.Entities.Abstract;
+using Pocker.Core.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Poker.Core.Entities
+namespace Pocker.Core.Entities
 {
     public class Deck : BaseEntity
     {

@@ -7,11 +7,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{E9C4AF90-594
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4C37E4C5-67A5-4784-8AF9-586FF6E76792}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker.Core.Tests", "tests\Pocker.Core.Tests\Poker.Core.Tests.csproj", "{196588CE-FC13-4886-A301-0080484729AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker.Core.Tests", "tests\Pocker.Core.Tests\Pocker.Core.Tests.csproj", "{196588CE-FC13-4886-A301-0080484729AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker.Core", "src\Pocker.Core\Poker.Core.csproj", "{9B053D4C-C0E5-419E-A371-088B27A0B804}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker.Core", "src\Pocker.Core\Pocker.Core.csproj", "{9B053D4C-C0E5-419E-A371-088B27A0B804}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Poker.ConsoleApp", "src\Pocker.ConsoleApp\Poker.ConsoleApp.csproj", "{688225E0-815C-4AC4-AFF7-8A68821996BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pocker.ConsoleApp", "src\Pocker.ConsoleApp\Pocker.ConsoleApp.csproj", "{688225E0-815C-4AC4-AFF7-8A68821996BE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,7 +1,7 @@
-﻿using Poker.Core.Entities.Abstract;
+﻿using Pocker.Core.Entities.Abstract;
 using System;
 
-namespace Poker.Core.Entities
+namespace Pocker.Core.Entities
 {
     public class Card : BaseEntity
     {

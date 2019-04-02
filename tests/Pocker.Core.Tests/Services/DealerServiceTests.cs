@@ -1,15 +1,15 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Poker.Core.Entities;
-using Poker.Core.Helpers;
-using Poker.Core.Interfaces;
-using Poker.Core.Tests.Helpers;
+using Pocker.Core.Entities;
+using Pocker.Core.Helpers;
+using Pocker.Core.Interfaces;
+using Pocker.Core.Tests.Helpers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poker.Core.Tests.Services
+namespace Pocker.Core.Tests.Services
 {
     [TestClass]
     public class DealerServiceTests

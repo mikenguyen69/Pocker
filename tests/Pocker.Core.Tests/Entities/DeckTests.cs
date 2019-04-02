@@ -1,8 +1,8 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Poker.Core.Entities;
+using Pocker.Core.Entities;
 using System.Linq;
 
-namespace Poker.Core.Tests.Entities
+namespace Pocker.Core.Tests.Entities
 {
     [TestClass]
     public class DeckTests

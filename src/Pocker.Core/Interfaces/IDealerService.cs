@@ -1,7 +1,7 @@
-﻿using Poker.Core.Entities;
+﻿using Pocker.Core.Entities;
 using System.Collections.Generic;
 
-namespace Poker.Core.Interfaces
+namespace Pocker.Core.Interfaces
 {
     public interface IDealerService
     {

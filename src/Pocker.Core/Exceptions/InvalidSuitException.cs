@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Poker.Core.Exceptions
+namespace Pocker.Core.Exceptions
 {
     public class InvalidSuitException : Exception
     {

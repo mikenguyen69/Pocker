@@ -1,9 +1,9 @@
-﻿using Poker.Core.Entities.Abstract;
-using Poker.Core.Exceptions;
-using Poker.Core.Helpers;
+﻿using Pocker.Core.Entities.Abstract;
+using Pocker.Core.Exceptions;
+using Pocker.Core.Helpers;
 using System.Collections.Generic;
 
-namespace Poker.Core.Entities
+namespace Pocker.Core.Entities
 {
     public class TwoCardsGame : Game
     {

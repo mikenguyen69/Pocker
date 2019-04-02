@@ -1,14 +1,14 @@
-﻿using Poker.Core.Entities;
-using Poker.Core.Exceptions;
-using Poker.Core.Helpers;
-using Poker.Core.Interfaces;
+﻿using Pocker.Core.Entities;
+using Pocker.Core.Exceptions;
+using Pocker.Core.Helpers;
+using Pocker.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Poker.Core.Services
+namespace Pocker.Core.Services
 {
     public class TwoCardsGameRule : IGameRuleService
     {
