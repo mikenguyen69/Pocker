@@ -140,5 +140,64 @@ namespace Pocker.Core.Tests.Services
             Assert.IsTrue(_gameRule.HasPair(cards));
         }
         
+        [TestMethod]
+        public void GenerateHandCardsPower_ShouldReturn5ForStraightFlush()
+        {
+            // Arrange 
+            var cards = new List<Card>() {
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_K),
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_A) };
+
+            // Act & Assert
+            Assert.AreEqual(5, _gameRule.GenerateHandCardsPower(cards));
+        }
+
+        [TestMethod]
+        public void GenerateHandCardsPower_ShouldReturn4ForFlush()
+        {
+            // Arrange 
+            var cards = new List<Card>() {
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_K),
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_10) };
+
+            // Act & Assert
+            Assert.AreEqual(4, _gameRule.GenerateHandCardsPower(cards));
+        }
+
+        [TestMethod]
+        public void GenerateHandCardsPower_ShouldReturn3ForStraight()
+        {
+            // Arrange 
+            var cards = new List<Card>() {
+                new Card(GlobalConstants.SUIT_SPADES, GlobalConstants.RANK_K),
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_A) };
+
+            // Act & Assert
+            Assert.AreEqual(3, _gameRule.GenerateHandCardsPower(cards));
+        }
+
+        [TestMethod]
+        public void GenerateHandCardsPower_ShouldReturn2ForPair()
+        {
+            // Arrange 
+            var cards = new List<Card>() {
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_A),
+                new Card(GlobalConstants.SUIT_HEARTS, GlobalConstants.RANK_A) };
+
+            // Act & Assert
+            Assert.AreEqual(2, _gameRule.GenerateHandCardsPower(cards));
+        }
+
+        [TestMethod]
+        public void GenerateHandCardsPower_ShouldReturn1FOrOnlyHighCard()
+        {
+            // Arrange 
+            var cards = new List<Card>() {
+                new Card(GlobalConstants.SUIT_DIAMONDS, GlobalConstants.RANK_K),
+                new Card(GlobalConstants.SUIT_SPADES, GlobalConstants.RANK_2) };
+
+            // Act & Assert
+            Assert.AreEqual(1, _gameRule.GenerateHandCardsPower(cards));
+        }
     }
 }

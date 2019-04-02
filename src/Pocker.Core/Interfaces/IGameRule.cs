@@ -13,5 +13,7 @@ namespace Pocker.Core.Interfaces
         bool IsFlush(IList<Card> cards);
         bool IsStraight(IList<Card> cards);
         bool HasPair(IList<Card> cards);
+
+        int GenerateHandCardsPower(IList<Card> cards);
     }
 }

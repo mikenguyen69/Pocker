@@ -7,7 +7,7 @@ namespace Pocker.Core.Entities
         public Player Player { get; set; }
         public IList<Card> Cards { get; set; }
         public int NumberOfCards { get; set; }
-        public int Power { get; set; }
+        public int HandCardsPower { get; set; }
 
         public PlayerHand(Player player, int numberOfCards)
         {
