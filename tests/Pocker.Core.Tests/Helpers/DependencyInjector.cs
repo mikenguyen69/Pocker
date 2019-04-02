@@ -4,6 +4,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Pocker.Core.Entities;
 using Pocker.Core.Interfaces;
 using Pocker.Core.Repositories;
+using Pocker.Core.Services;
 using System;
 
 namespace Pocker.Core.Tests.Helpers
@@ -23,11 +24,13 @@ namespace Pocker.Core.Tests.Helpers
 
             // register for all the repositories
             builder.RegisterType<Repository<Player>>().As<IRepository<Player>>();
+            
             // Mock the database only
             builder.RegisterType<MockPockerDatabase>().As<IPockerDatabase>();
 
             // register for services
-            
+            builder.RegisterType<TwoCardsGameRule>().As<IGameRule>();
+
             var appContainer = builder.Build();
             _serviceProvider = new AutofacServiceProvider(appContainer);
         }

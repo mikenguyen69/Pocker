@@ -9,9 +9,9 @@ namespace Pocker.Core.Interfaces
 {
     public interface IGameRule
     {
-        bool HasStraightFlush(PlayerHand hand);
-        bool HasFlush(PlayerHand hand);
-        bool HasStraight(PlayerHand hand);
-        bool HasPair(PlayerHand hand);
+        bool IsStraightFlush(IList<Card> cards);
+        bool IsFlush(IList<Card> cards);
+        bool IsStraight(IList<Card> cards);
+        bool HasPair(IList<Card> cards);
     }
 }

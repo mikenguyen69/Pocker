@@ -44,5 +44,21 @@ namespace Pocker.Core.Entities
             }
 
         }
+
+        #region Helpers
+        public override bool Equals(object obj)
+        {
+            //Check for null and compare run-time types.
+            if ((obj == null) || !GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                var suit = (Suit)obj;
+                return suit.Type == Type && suit.Power == Power;
+            }
+        }
+        #endregion
     }
 }

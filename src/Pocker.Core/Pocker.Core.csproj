@@ -51,6 +51,7 @@
     <Compile Include="Entities\Rank.cs" />
     <Compile Include="Entities\Suit.cs" />
     <Compile Include="Entities\TwoCardsGame.cs" />
+    <Compile Include="Exceptions\InvalidNumberOfCardException.cs" />
     <Compile Include="Exceptions\InvalidNumberOfPlayerException.cs" />
     <Compile Include="Exceptions\InvalidNumberOfRoundException.cs" />
     <Compile Include="Exceptions\InvalidRankException.cs" />
@@ -62,7 +63,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\PockerDatabase.cs" />
     <Compile Include="Repositories\Repository.cs" />
-    <Compile Include="Services\GameRuleService.cs" />
+    <Compile Include="Services\TwoCardsGameRule.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -5,13 +5,13 @@ namespace Pocker.Core.Entities
 {
     public class Card : BaseEntity
     {
-        public Suit Suite { get; private set; }
+        public Suit Suit { get; private set; }
         public Rank Rank { get; private set; }
         public bool Visible { get; set; }
 
         public Card(string suiteType, string rankType)
         {
-            Suite = new Suit(suiteType);
+            Suit = new Suit(suiteType);
             Rank = new Rank(rankType);
             Visible = false;
         }
@@ -23,7 +23,7 @@ namespace Pocker.Core.Entities
         {
             get
             {
-                return Suite.Power * Rank.Power;
+                return Suit.Power * Rank.Power;
             }
         }
 
@@ -38,7 +38,7 @@ namespace Pocker.Core.Entities
             else
             {
                 Card card = (Card)obj;
-                return card.Suite.Power == Suite.Power && card.Rank.Power == Rank.Power;
+                return card.Suit.Power == Suit.Power && card.Rank.Power == Rank.Power;
             }
         }
         #endregion

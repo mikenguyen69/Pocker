@@ -1,11 +1,6 @@
 ﻿using Pocker.Core.Entities.Abstract;
 using Pocker.Core.Exceptions;
 using Pocker.Core.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pocker.Core.Entities
 {
@@ -45,5 +40,21 @@ namespace Pocker.Core.Entities
                 }
             }
         }
+
+        #region Helpers
+        public override bool Equals(object obj)
+        {
+            //Check for null and compare run-time types.
+            if ((obj == null) || !GetType().Equals(obj.GetType()))
+            {
+                return false;
+            }
+            else
+            {
+                var rank = (Rank)obj;
+                return rank.Type == Type && rank.Power == Power;
+            }
+        }
+        #endregion
     }
 }

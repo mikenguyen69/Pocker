@@ -7,6 +7,8 @@
         public const string INVALID_RANK_EXCEPTION = "Rank type is not valid";
         public const string INVALID_NUMBEROFPLAYER_EXCEPTION = "Number of players is not between 2 - 6";
         public const string INVALID_NUMBEROFROUND_EXCEPTION = "Number of rounds is not between 2 - 5";
+        public const string INVALID_NUMBEROFCARD_EXCEPTION = "Number of cards is not 2";
+
         // Suites
         public const string SUIT_SPADES = "Spades";
         public const string SUIT_CLUBS = "Clubs";

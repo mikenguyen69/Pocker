@@ -66,6 +66,7 @@
     <Compile Include="Helpers\DependencyInjector.cs" />
     <Compile Include="Helpers\MockPockerDatabase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\TwoCardsGameRuleTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
