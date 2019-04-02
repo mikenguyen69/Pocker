@@ -1,4 +1,4 @@
-# 2 cards automated power game
+# A Simple Pocker Game
 This is sample pocker game app following SOLID, DRY, TDD and design patterns
 
 ## 1. Design
