@@ -1,11 +1,6 @@
 ﻿using Pocker.Core.Entities.Abstract;
 using Pocker.Core.Exceptions;
 using Pocker.Core.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pocker.Core.Entities
 {
@@ -58,6 +53,16 @@ namespace Pocker.Core.Entities
                 var suit = (Suit)obj;
                 return suit.Type == Type && suit.Power == Power;
             }
+        }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
         }
         #endregion
     }

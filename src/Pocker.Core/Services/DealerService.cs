@@ -4,8 +4,6 @@ using Pocker.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Pocker.Core.Services
 {
@@ -73,5 +71,36 @@ namespace Pocker.Core.Services
             hand.HandRankPower = result;
         }
 
+        public void AssignScore(GameRound round, int maxScore)
+        {
+            int currentCount = maxScore;
+            foreach (var hand in round.PlayerHands.OrderByDescending(x => x.Power))
+            {
+                hand.Score = currentCount;
+
+                if (currentCount == maxScore)
+                {
+                    round.UpdateWinner(hand);
+                }
+
+                currentCount--;
+            }
+        }
+
+        public IList<Player> GetWinners(TwoCardsGame game)
+        {
+            // Get all records of player and his/her play hands
+            var playerRecords = game.GameRounds.SelectMany(x => x.PlayerHands).GroupBy(x => x.Player);
+
+            // Find the max total score first
+            int maxScore = playerRecords.Max(x => x.Sum(b => b.Score));
+
+            // Winners are those having the same max score
+            var winners = playerRecords.Where(x => x.Sum(b => b.Score) == maxScore).Select(c => c.Key);
+
+            game.WinningScore = maxScore;
+
+            return winners.ToList();
+        }
     }
 }

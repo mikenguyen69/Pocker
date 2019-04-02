@@ -55,6 +55,16 @@ namespace Pocker.Core.Entities
                 return rank.Type == Type && rank.Power == Power;
             }
         }
+
+        public override string ToString()
+        {
+            return base.ToString();
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
         #endregion
     }
 }

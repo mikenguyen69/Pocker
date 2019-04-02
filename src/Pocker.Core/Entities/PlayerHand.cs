@@ -31,5 +31,15 @@ namespace Pocker.Core.Entities
             NumberOfCards = numberOfCards;
             Cards = new List<Card>();
         }
+
+        public string GetCardsOnHandString()
+        {
+            return string.Format("{0} [{1}]", Player.Name, string.Join(",", Cards.Select(x => x.ToString())));
+        }
+
+        public string GetHandRankingString()
+        {
+            return string.Format("{0} [{1}]", Player.Name, Score);
+        }
     }
 }

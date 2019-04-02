@@ -8,6 +8,7 @@ namespace Pocker.Core.Entities.Abstract
     {
         public IList<Player> Players { get; set; }
         public IList<GameRound> GameRounds { get; set; }
+        public int WinningScore { get; set; }
 
         public Game(IList<Player> players, int numberOfRounds, int numberOfCards)
         {

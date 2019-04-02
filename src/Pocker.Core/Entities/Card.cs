@@ -41,6 +41,16 @@ namespace Pocker.Core.Entities
                 return card.Suit.Power == Suit.Power && card.Rank.Power == Rank.Power;
             }
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0} {1}", Rank.Type, Suit.Type);
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
         #endregion
     }
 }

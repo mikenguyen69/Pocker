@@ -4,16 +4,17 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9B053D4C-C0E5-419E-A371-088B27A0B804}</ProjectGuid>
-    <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pocker.Core</RootNamespace>
-    <AssemblyName>Pocker.Core</AssemblyName>
+    <ProjectGuid>{688225E0-815C-4AC4-AFF7-8A68821996BE}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Pocker.ConsoleApp</RootNamespace>
+    <AssemblyName>Pocker.ConsoleApp</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,6 +24,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -31,6 +33,15 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Autofac, Version=4.9.2.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.4.9.2\lib\net45\Autofac.dll</HintPath>
+    </Reference>
+    <Reference Include="Autofac.Extensions.DependencyInjection, Version=4.4.0.0, Culture=neutral, PublicKeyToken=17863af14b0044da, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Autofac.Extensions.DependencyInjection.4.4.0\lib\netstandard2.0\Autofac.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.1.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.1.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -41,33 +52,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entities\Abstract\BaseEntity.cs" />
-    <Compile Include="Entities\Card.cs" />
-    <Compile Include="Entities\Deck.cs" />
-    <Compile Include="Entities\Abstract\Game.cs" />
-    <Compile Include="Entities\GameRound.cs" />
-    <Compile Include="Entities\Player.cs" />
-    <Compile Include="Entities\PlayerHand.cs" />
-    <Compile Include="Entities\Rank.cs" />
-    <Compile Include="Entities\Suit.cs" />
-    <Compile Include="Entities\TwoCardsGame.cs" />
-    <Compile Include="Exceptions\InvalidNumberOfCardException.cs" />
-    <Compile Include="Exceptions\InvalidNumberOfPlayerException.cs" />
-    <Compile Include="Exceptions\InvalidNumberOfRoundException.cs" />
-    <Compile Include="Exceptions\InvalidRankException.cs" />
-    <Compile Include="Exceptions\InvalidSuitException.cs" />
-    <Compile Include="Helpers\GlobalConstants.cs" />
-    <Compile Include="Helpers\ListUtility.cs" />
-    <Compile Include="Interfaces\IDealerService.cs" />
-    <Compile Include="Interfaces\IGameRuleService.cs" />
-    <Compile Include="Interfaces\IPockerDatabase.cs" />
-    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Repositories\PockerDatabase.cs" />
-    <Compile Include="Repositories\Repository.cs" />
-    <Compile Include="Services\DealerService.cs" />
-    <Compile Include="Services\TwoCardsGameRule.cs" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Pocker.Core\Pocker.Core.csproj">
+      <Project>{9b053d4c-c0e5-419e-a371-088b27a0b804}</Project>
+      <Name>Pocker.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
