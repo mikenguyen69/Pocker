@@ -61,7 +61,7 @@
     <Compile Include="Entities\CardTests.cs" />
     <Compile Include="Entities\DeckTests.cs" />
     <Compile Include="Entities\RankTests.cs" />
-    <Compile Include="Entities\SuiteTests.cs" />
+    <Compile Include="Entities\SuitTests.cs" />
     <Compile Include="Entities\TwoCardsGameTests.cs" />
     <Compile Include="Helpers\DependencyInjector.cs" />
     <Compile Include="Helpers\MockPockerDatabase.cs" />

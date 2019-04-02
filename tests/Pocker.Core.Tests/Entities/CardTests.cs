@@ -12,11 +12,11 @@ namespace Pocker.Core.Tests.Entities
     [TestClass]
     public class CardTests
     {
-        [DataRow(GlobalConstants.SUITE_SPADES, GlobalConstants.SUITE_CLUBS)]
-        [DataRow(GlobalConstants.SUITE_CLUBS, GlobalConstants.SUITE_HEARTS)]
-        [DataRow(GlobalConstants.SUITE_HEARTS, GlobalConstants.SUITE_DIAMONDS)]
+        [DataRow(GlobalConstants.SUIT_SPADES, GlobalConstants.SUIT_CLUBS)]
+        [DataRow(GlobalConstants.SUIT_CLUBS, GlobalConstants.SUIT_HEARTS)]
+        [DataRow(GlobalConstants.SUIT_HEARTS, GlobalConstants.SUIT_DIAMONDS)]
         [DataTestMethod]
-        public void DifferentSuite_LowestRankOfHigherSuiteIsMorePowerThanHighestRankofLowerSuite(string highSuite, string lowSuite)
+        public void DifferentSuit_LowestRankOfHigherSuiteIsMorePowerThanHighestRankofLowerSuite(string highSuite, string lowSuite)
         {
             // Arrange 
             Card highCard = new Card(highSuite, GlobalConstants.RANK_2);
@@ -29,12 +29,12 @@ namespace Pocker.Core.Tests.Entities
             Assert.IsTrue(stronger);
         }
 
-        [DataRow(GlobalConstants.SUITE_SPADES)]
-        [DataRow(GlobalConstants.SUITE_CLUBS)]
-        [DataRow(GlobalConstants.SUITE_HEARTS)]
-        [DataRow(GlobalConstants.SUITE_DIAMONDS)]
+        [DataRow(GlobalConstants.SUIT_SPADES)]
+        [DataRow(GlobalConstants.SUIT_CLUBS)]
+        [DataRow(GlobalConstants.SUIT_HEARTS)]
+        [DataRow(GlobalConstants.SUIT_DIAMONDS)]
         [DataTestMethod]
-        public void SameSuite_HigherRankIsMorePowerful(string suite)
+        public void SameSuit_HigherRankIsMorePowerful(string suite)
         {
             // Arrange 
             IList<Card> cards = new List<Card>();

@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 
 namespace Pocker.Core.Entities
 {
-    public class Suite : BaseEntity
+    public class Suit : BaseEntity
     {
         public string Type { get; private set; }
 
-        public Suite(string type)
+        public Suit(string type)
         {
             Type = type;
         }
@@ -34,12 +34,12 @@ namespace Pocker.Core.Entities
             {
                 switch(Type)
                 {
-                    case GlobalConstants.SUITE_SPADES: return 1000;
-                    case GlobalConstants.SUITE_CLUBS: return 100;
-                    case GlobalConstants.SUITE_HEARTS: return 10;
-                    case GlobalConstants.SUITE_DIAMONDS: return 1;
+                    case GlobalConstants.SUIT_SPADES: return 1000;
+                    case GlobalConstants.SUIT_CLUBS: return 100;
+                    case GlobalConstants.SUIT_HEARTS: return 10;
+                    case GlobalConstants.SUIT_DIAMONDS: return 1;
 
-                    default: throw new InvalidSuiteException(GlobalConstants.INVALID_SUITE_EXCEPTION);
+                    default: throw new InvalidSuitException(GlobalConstants.INVALID_SUITE_EXCEPTION);
                 }
             }
 

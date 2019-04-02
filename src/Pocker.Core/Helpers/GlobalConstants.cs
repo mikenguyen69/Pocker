@@ -8,14 +8,14 @@
         public const string INVALID_NUMBEROFPLAYER_EXCEPTION = "Number of players is not between 2 - 6";
         public const string INVALID_NUMBEROFROUND_EXCEPTION = "Number of rounds is not between 2 - 5";
         // Suites
-        public const string SUITE_SPADES = "Spades";
-        public const string SUITE_CLUBS = "Clubs";
-        public const string SUITE_HEARTS = "Hearts";
-        public const string SUITE_DIAMONDS = "Diamonds";
+        public const string SUIT_SPADES = "Spades";
+        public const string SUIT_CLUBS = "Clubs";
+        public const string SUIT_HEARTS = "Hearts";
+        public const string SUIT_DIAMONDS = "Diamonds";
 
         public static string[] SUITE_LIST = new string[]
         {
-            SUITE_SPADES, SUITE_CLUBS, SUITE_HEARTS, SUITE_DIAMONDS
+            SUIT_SPADES, SUIT_CLUBS, SUIT_HEARTS, SUIT_DIAMONDS
         };
 
         // Ranks

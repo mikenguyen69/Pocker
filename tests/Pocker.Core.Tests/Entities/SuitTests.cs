@@ -6,28 +6,28 @@ using Pocker.Core.Helpers;
 namespace Pocker.Core.Tests.Entities
 {
     [TestClass]
-    public class SuiteTests
+    public class SuitTests
     {
-        [DataRow(GlobalConstants.SUITE_SPADES, 1000)]
-        [DataRow(GlobalConstants.SUITE_CLUBS, 100)]
-        [DataRow(GlobalConstants.SUITE_HEARTS, 10)]
-        [DataRow(GlobalConstants.SUITE_DIAMONDS, 1)]
+        [DataRow(GlobalConstants.SUIT_SPADES, 1000)]
+        [DataRow(GlobalConstants.SUIT_CLUBS, 100)]
+        [DataRow(GlobalConstants.SUIT_HEARTS, 10)]
+        [DataRow(GlobalConstants.SUIT_DIAMONDS, 1)]
         [DataTestMethod]
         public void ShouldReturnValidPower(string type, int expectedPower)
         {
             // Arrange
-            Suite suite = new Suite(type);
+            Suit suite = new Suit(type);
 
             // Act & Assert
             Assert.AreEqual(expectedPower, suite.Power);
         }
 
-        [ExpectedException(typeof(InvalidSuiteException))]
+        [ExpectedException(typeof(InvalidSuitException))]
         [TestMethod]
         public void ShouldThrowInvalidSuiteException()
         {
             // Arrange
-            Suite suite = new Suite("NOT AVALIABLE SUITE");
+            Suit suite = new Suit("NOT AVALIABLE SUITE");
 
             // Act
             int power = suite.Power;

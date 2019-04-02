@@ -5,13 +5,13 @@ namespace Pocker.Core.Entities
 {
     public class Card : BaseEntity
     {
-        public Suite Suite { get; private set; }
+        public Suit Suite { get; private set; }
         public Rank Rank { get; private set; }
         public bool Visible { get; set; }
 
         public Card(string suiteType, string rankType)
         {
-            Suite = new Suite(suiteType);
+            Suite = new Suit(suiteType);
             Rank = new Rank(rankType);
             Visible = false;
         }
