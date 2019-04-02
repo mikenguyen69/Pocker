@@ -49,19 +49,15 @@ namespace Pocker.Core.Entities
         /// <summary>
         /// Return the number of cards to the player
         /// </summary>
-        public IList<Card> DealCards(int numberOfCard)
+        public void DealCards(PlayerHand hand)
         {
-            IList<Card> returnCards = new List<Card>();
-
-            for(int i=0; i < numberOfCard; i++)
+            for(int i=0; i < hand.NumberOfCards; i++)
             {
                 Card card = cards.FirstOrDefault(x => !x.Visible);
                 card.Visible = true;
 
-                returnCards.Add(card);
+                hand.Cards.Add(card);
             }
-            
-            return returnCards;
         }
 
         public void ShuffleMultiple(int times)

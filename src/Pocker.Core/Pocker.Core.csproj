@@ -44,8 +44,15 @@
     <Compile Include="Entities\Abstract\BaseEntity.cs" />
     <Compile Include="Entities\Card.cs" />
     <Compile Include="Entities\Deck.cs" />
+    <Compile Include="Entities\Abstract\Game.cs" />
+    <Compile Include="Entities\GameRound.cs" />
+    <Compile Include="Entities\Player.cs" />
+    <Compile Include="Entities\PlayerHand.cs" />
     <Compile Include="Entities\Rank.cs" />
     <Compile Include="Entities\Suite.cs" />
+    <Compile Include="Entities\TwoCardsGame.cs" />
+    <Compile Include="Exceptions\InvalidNumberOfPlayerException.cs" />
+    <Compile Include="Exceptions\InvalidNumberOfRoundException.cs" />
     <Compile Include="Exceptions\InvalidRankException.cs" />
     <Compile Include="Exceptions\InvalidSuiteException.cs" />
     <Compile Include="Helpers\GlobalConstants.cs" />

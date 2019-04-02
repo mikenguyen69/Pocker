@@ -1,17 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Pocker.Core.Helpers
+﻿namespace Pocker.Core.Helpers
 {
     public class GlobalConstants
     {
         // Exceptions
         public const string INVALID_SUITE_EXCEPTION = "Suite type is not valid";
         public const string INVALID_RANK_EXCEPTION = "Rank type is not valid";
-
+        public const string INVALID_NUMBEROFPLAYER_EXCEPTION = "Number of players is not between 2 - 6";
+        public const string INVALID_NUMBEROFROUND_EXCEPTION = "Number of rounds is not between 2 - 5";
         // Suites
         public const string SUITE_SPADES = "Spades";
         public const string SUITE_CLUBS = "Clubs";

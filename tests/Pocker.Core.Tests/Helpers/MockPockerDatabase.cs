@@ -5,13 +5,13 @@ using Pocker.Core.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Pocker.Core.Repositories
+namespace Pocker.Core.Tests.Helpers
 {
-    public class PockerDatabase : IPockerDatabase
+    public class MockPockerDatabase : IPockerDatabase
     {
         private static Hashtable dataStore = new Hashtable();
 
-        public PockerDatabase()
+        public MockPockerDatabase()
         {
             dataStore[typeof(Player)] = new List<Player>()
             {

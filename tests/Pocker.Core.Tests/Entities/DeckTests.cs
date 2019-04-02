@@ -19,7 +19,7 @@ namespace Pocker.Core.Tests.Entities
         }
 
         [TestMethod]
-        public void NewDeckShouldHave52CardsInvisible()
+        public void NewDeck_ShouldHave52CardsInvisible()
         {
             // Arrange
             
@@ -31,7 +31,7 @@ namespace Pocker.Core.Tests.Entities
         }
 
         [TestMethod]
-        public void ShuffleShouldMakeTheCardSequenceDifferent()
+        public void ShuffleMultiple_1_ShouldMakeTheCardSequenceDifferent()
         {
             // Arrange 
             deck.ShuffleMultiple(1);
@@ -41,6 +41,21 @@ namespace Pocker.Core.Tests.Entities
 
             // Act && Assert
             Assert.IsTrue(HasDifferentSequences(before, after));
+        }
+
+        [TestMethod]
+        public void DealCards_ShouldReturnVisibleCardsToPlayerHand()
+        {
+            // Arrange 
+            PlayerHand playerHand = new PlayerHand(new Player("Mike"), 2);
+
+            // Act
+            deck.DealCards(playerHand);
+
+            // Assert
+            Assert.AreEqual(2, playerHand.Cards.Count(x => x.Visible));
+            Assert.AreEqual(50, deck.GetCards().Count(x => !x.Visible));
+            Assert.AreEqual(2, deck.GetCards().Count(x => x.Visible));
         }
 
         #region Helpers
