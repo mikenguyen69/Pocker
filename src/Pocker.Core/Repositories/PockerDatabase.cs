@@ -1,11 +1,11 @@
-﻿using Pocker.Core.Entities;
-using Pocker.Core.Entities.Abstract;
-using Pocker.Core.Helpers;
-using Pocker.Core.Interfaces;
+﻿using Poker.Core.Entities;
+using Poker.Core.Entities.Abstract;
+using Poker.Core.Helpers;
+using Poker.Core.Interfaces;
 using System.Collections;
 using System.Collections.Generic;
 
-namespace Pocker.Core.Repositories
+namespace Poker.Core.Repositories
 {
     public class PockerDatabase : IPockerDatabase
     {

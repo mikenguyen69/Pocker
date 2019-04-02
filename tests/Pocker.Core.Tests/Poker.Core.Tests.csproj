@@ -8,8 +8,8 @@
     <ProjectGuid>{196588CE-FC13-4886-A301-0080484729AF}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Pocker.Core.Tests</RootNamespace>
-    <AssemblyName>Pocker.Core.Tests</AssemblyName>
+    <RootNamespace>Poker.Core.Tests</RootNamespace>
+    <AssemblyName>Poker.Core.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -74,9 +74,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\src\Pocker.Core\Pocker.Core.csproj">
+    <ProjectReference Include="..\..\src\Pocker.Core\Poker.Core.csproj">
       <Project>{9b053d4c-c0e5-419e-a371-088b27a0b804}</Project>
-      <Name>Pocker.Core</Name>
+      <Name>Poker.Core</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

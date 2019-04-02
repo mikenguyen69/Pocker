@@ -1,10 +1,10 @@
-﻿using Pocker.Core.Entities.Abstract;
-using Pocker.Core.Interfaces;
+﻿using Poker.Core.Entities.Abstract;
+using Poker.Core.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pocker.Core.Repositories
+namespace Poker.Core.Repositories
 {
     public class Repository<T> : IRepository<T> where T : BaseEntity
     {

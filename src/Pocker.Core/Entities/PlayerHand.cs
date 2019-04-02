@@ -1,8 +1,8 @@
-﻿using Pocker.Core.Entities.Abstract;
+﻿using Poker.Core.Entities.Abstract;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Pocker.Core.Entities
+namespace Poker.Core.Entities
 {
     public class PlayerHand : BaseEntity
     {

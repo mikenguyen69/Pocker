@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace Pocker.Core.Exceptions
+namespace Poker.Core.Exceptions
 {
     public class InvalidNumberOfRoundException : Exception
     {

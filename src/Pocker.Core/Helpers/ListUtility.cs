@@ -1,8 +1,8 @@
-﻿using Pocker.Core.Entities.Abstract;
+﻿using Poker.Core.Entities.Abstract;
 using System;
 using System.Collections.Generic;
 
-namespace Pocker.Core.Helpers
+namespace Poker.Core.Helpers
 {
     public static class ListUtility
     {

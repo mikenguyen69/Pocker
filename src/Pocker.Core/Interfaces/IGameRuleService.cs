@@ -1,11 +1,11 @@
-﻿using Pocker.Core.Entities;
+﻿using Poker.Core.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Pocker.Core.Interfaces
+namespace Poker.Core.Interfaces
 {
     public interface IGameRuleService
     {

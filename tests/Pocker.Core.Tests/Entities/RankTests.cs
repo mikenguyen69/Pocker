@@ -1,9 +1,9 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Pocker.Core.Entities;
-using Pocker.Core.Exceptions;
-using Pocker.Core.Helpers;
+using Poker.Core.Entities;
+using Poker.Core.Exceptions;
+using Poker.Core.Helpers;
 
-namespace Pocker.Core.Tests.Entities
+namespace Poker.Core.Tests.Entities
 {
     [TestClass]
     public class RankTests

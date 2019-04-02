@@ -1,8 +1,8 @@
-﻿using Pocker.Core.Exceptions;
-using Pocker.Core.Helpers;
+﻿using Poker.Core.Exceptions;
+using Poker.Core.Helpers;
 using System.Collections.Generic;
 
-namespace Pocker.Core.Entities.Abstract
+namespace Poker.Core.Entities.Abstract
 {
     public abstract class Game : BaseEntity
     {

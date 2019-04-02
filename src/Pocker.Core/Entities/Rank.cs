@@ -1,8 +1,8 @@
-﻿using Pocker.Core.Entities.Abstract;
-using Pocker.Core.Exceptions;
-using Pocker.Core.Helpers;
+﻿using Poker.Core.Entities.Abstract;
+using Poker.Core.Exceptions;
+using Poker.Core.Helpers;
 
-namespace Pocker.Core.Entities
+namespace Poker.Core.Entities
 {
     public class Rank : BaseEntity
     {
