@@ -1,5 +1,5 @@
-# A Simple Pocker Game
-This is sample pocker game app following SOLID, DRY, TDD and design patterns
+# A Simple Poker Game - Pocker
+This is sample poker game app following SOLID, DRY, TDD and design patterns
 
 ## 1. Design
 Key design elements: 
